@@ -14,6 +14,7 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/videoStyle.css">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -120,33 +121,35 @@
     </header>
     <!--Main Navigation-->
     <div class="container-fluid rect-bg max" id="producto">
-            <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-8 row rects">
-                    <div class="col-sm-4">
-                        <img src="images/appointment.png" alt="Appointment">
-                        <h3>A tu medida</h3>
-                        <p>Crédito basado en tu ciclo de ventas. Obtén el dinero que necesitas, a un plazo de hasta 12 meses</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="images/smartphone.png" alt="Smartphone">
-                        <h3>Accesible</h3>
-                        <p>Obtén tu crédito de forma rápida y sencilla, todo online. Así no hay papeleo ni haces filas largas</p>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="images/clock.png" alt="Clock">
-                        <h3>Inmediato</h3>
-                        <p>Te entregamos tu dinero vía transferencia en cuestión de minutos</p>
-                    </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 row rects">
+                <div class="col-sm-4">
+                    <img src="images/appointment.png" alt="Appointment">
+                    <h3>A tu medida</h3>
+                    <p>Crédito basado en tu ciclo de ventas. Obtén el dinero que necesitas, a un plazo de hasta 12 meses
+                    </p>
                 </div>
-                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <img src="images/smartphone.png" alt="Smartphone">
+                    <h3>Accesible</h3>
+                    <p>Obtén tu crédito de forma rápida y sencilla, todo online. Así no hay papeleo ni haces filas
+                        largas</p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="images/clock.png" alt="Clock">
+                    <h3>Inmediato</h3>
+                    <p>Te entregamos tu dinero vía transferencia en cuestión de minutos</p>
+                </div>
             </div>
+            <div class="col-sm-2"></div>
         </div>
+    </div>
     <!--Main layout-->
     <main class="mt-5">
         <div class="container">
 
-               
+
 
 
 
@@ -217,6 +220,27 @@
 
             </section>
             <!--Section: Best Features-->
+
+            <hr class="my-5">
+            <!--Section:Video + title + subtitle-->
+            <section class="text-center" id="VideSection">
+                <!-- <video class="video-fluid z-depth-1" autoplay loop controls muted>
+                    <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
+                </video> -->
+
+                <div class="embed-responsive embed-responsive-16by9" id="divVideo">
+                    <!-- <iframe id="frameID" class="embed-responsive-item" allowfullscreen></iframe> -->
+                </div>
+                <div>
+                    <h2 class="mb-5 font-weight-bold">Poner algo</h2>
+                    <p>Poner otra cosa por aqui</p>
+                </div>
+                
+
+            </section>
+
+
+            <!--Section:Video + title + subtitle-->
 
             <hr class="my-5">
 
@@ -793,6 +817,8 @@
             interval: 3000,
         })
     </script>
+
+    <script type="text/javascript" src="js/modifyIframe.js"></script>
 
 
 
