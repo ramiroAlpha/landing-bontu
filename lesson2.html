@@ -14,6 +14,7 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/videoStyle.css">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -119,10 +120,38 @@
 
     </header>
     <!--Main Navigation-->
-
+    <div class="container-fluid rect-bg max" id="producto">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 row rects">
+                <div class="col-sm-4">
+                    <img src="images/appointment.png" alt="Appointment">
+                    <h3>A tu medida</h3>
+                    <p>Crédito basado en tu ciclo de ventas. Obtén el dinero que necesitas, a un plazo de hasta 12 meses
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="images/smartphone.png" alt="Smartphone">
+                    <h3>Accesible</h3>
+                    <p>Obtén tu crédito de forma rápida y sencilla, todo online. Así no hay papeleo ni haces filas
+                        largas</p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="images/clock.png" alt="Clock">
+                    <h3>Inmediato</h3>
+                    <p>Te entregamos tu dinero vía transferencia en cuestión de minutos</p>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
     <!--Main layout-->
     <main class="mt-5">
         <div class="container">
+
+
+
+
 
             <!--Section: Best Features-->
             <section id="best-features" class="text-center">
@@ -191,6 +220,22 @@
 
             </section>
             <!--Section: Best Features-->
+
+            <hr class="my-5">
+            <!--Section:Video + title + subtitle-->
+            <section class="text-center" id="VideSection">
+                <div class="embed-responsive embed-responsive-16by9" id="divVideo">
+                </div>
+                <div id="myCustom">
+
+                </div>
+
+                
+
+            </section>
+
+
+            <!--Section:Video + title + subtitle-->
 
             <hr class="my-5">
 
@@ -405,6 +450,93 @@
                             debitis aut rerum.</p>
                         <p>by <a><strong>Jessica Clark</strong></a>, 26/08/2016</p>
                         <a class="btn btn-primary btn-md">Read more</a>
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+
+                        <!--Excerpt-->
+                        <a href="" class="teal-text">
+                            <h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6>
+                        </a>
+                        <h4 class="mb-3"><strong>This is title of the news</strong></h4>
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                            quod maxime
+                            placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut
+                            officiis
+                            debitis aut rerum.</p>
+
+                        <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
+                            quod maxime
+                            placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut
+                            officiis
+                            debitis aut rerum.</p>
+                        <p>by <a><strong>Jessica Clark</strong></a>, 26/08/2016</p>
+                        <a class="btn btn-primary btn-md">Read more</a>
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4">
+
+                        <!--Carousel Wrapper-->
+                        <div id="carousel-example-1z" class="carousel slide carousel-fade carousel-fade"
+                            data-ride="carousel">
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner z-depth-1-half" role="listbox">
+                                <!--First slide-->
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100"
+                                        src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg"
+                                        alt="First slide">
+                                </div>
+                                <!--/First slide-->
+                                <!--Second slide-->
+                                <div class="carousel-item">
+                                    <img class="d-block w-100"
+                                        src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
+                                        alt="Second slide">
+                                </div>
+                                <!--/Second slide-->
+                                <!--Third slide-->
+                                <div class="carousel-item">
+                                    <img class="d-block w-100"
+                                        src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+                                        alt="Third slide">
+                                </div>
+                                <!--/Third slide-->
+                            </div>
+                            <!--/.Slides-->
+                            <!--Controls-->
+                            <a class="carousel-control-prev" href="#carousel-example-1z" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel-example-1z" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <!--/.Controls-->
+                        </div>
+                        <!--/.Carousel Wrapper-->
 
                     </div>
                     <!--Grid column-->
@@ -680,6 +812,9 @@
             interval: 3000,
         })
     </script>
+
+    <script type="text/javascript" src="js/modifyIframe.js"></script>
+    <script type="text/javascript" src="js/customControls.js"></script>
 
 
 
