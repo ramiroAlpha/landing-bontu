@@ -1,3 +1,4 @@
+/* CSS DOCUMENT */
 html{
     scroll-behavior: smooth;
 }
@@ -38,7 +39,7 @@ header{
     overflow: auto;
 }
 
-.navbar-brand{
+.navbar-brand{ 
     background: url('../images/LogoBontuWhite.png') center center no-repeat;
     background-size: 100%;
     text-indent: -99999px;
