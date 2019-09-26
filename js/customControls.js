@@ -1,10 +1,25 @@
-var videoUno = {
-    control: 'iFrame',
-    id: "video",
-    src: "https://www.youtube.com/embed/cBusDEvg9Tw?controls=0",
-    class: "embed-responsive-item",
-    allowfullscreen: true
+var divVideo = {
+    // control: 'iFrame',
+    // id: "video",
+    // src: "https://www.youtube.com/embed/cBusDEvg9Tw?controls=0",
+    // class: "embed-responsive-item",
+    // allowfullscreen: true
+    control: 'div',
+    id: "divVideo",
+    class: "embed-responsive embed-responsive-16by9",
+    elements: {
+        control: 'div',
+        id: "divVideo2",
+        class: "embed-responsive embed-responsive-16by9",
+        elements: {
+            control: "qasd"
+
+        }
+    }
+
 }
+
+
 
 var jsonCustom = {
     myCustom:
@@ -31,9 +46,8 @@ var jsonCustom = {
                 class: "form-control form-control-sm",
                 isRequired: true
             },
-
         ],
-    divVideo:
+    VideSection:
         [
             videoUno
         ]
@@ -48,11 +62,29 @@ $(document).ready(function () {
 
 function myFunction(elementos, divId) {
     elementos.forEach(element => {
-        var inputElement = document.createElement(element.control);
-        for (e in element) {
-            $(inputElement).attr(e, element[e])
-        }
-        document.getElementById(divId).appendChild(inputElement);
-    });
+        
+        // // var inputElement = document.createElement(element.control);
+        // for (e in element) {
+        //     switch (e) {
+        //         case "control":
+        //             var inputElement = document.createElement(element.control);
+        //             break;
+        //         case "elements":
+        //             for (e in element) {
+
+
+        //             }
+        //             if (e != "control") {
+        //                 $(inputElement).attr(e, element[e])
+        //             }
+        //             else {
+        //                 var inputElement = document.createElement(element.control);
+        //             }
+
+        //     }
+        //     if (element.control != "div") {
+        //         document.getElementById(divId).appendChild(inputElement);
+        //     }
+        });
 }
 
