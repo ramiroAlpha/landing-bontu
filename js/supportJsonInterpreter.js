@@ -48,11 +48,12 @@ function addJson2Html(jsonStructure, container) {
     }
 }
 
-function basicStructure(typeComponent) {
+function basicStructure(typeComponent, attr=null, text=null, childComponent=null) {
     return {
         typeName: typeComponent,
-        attr: {},
-        childComponent: {}
+        attr: attr instanceof Object && attr != null ? attr: {},
+        text: text instanceof Object && text != null ? text: {},
+        childComponent: childComponent instanceof Object && childComponent != null ? childComponent: {}
     }
 
 }
