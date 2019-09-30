@@ -43,12 +43,23 @@
     <script type="text/javascript" src="js/supportJsonInterpreter.js"></script>
     <script type="text/javascript" src="js/navBar.js"></script>
     <script type="text/javascript" src="js/divProducto.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript" src="js/productConfig.js"></script>
-
-=======
     <script type="text/javascript" src="js/footerCustom.js"></script>
->>>>>>> 823d894a5dffb15dd1d2a37008c32708a57af198
+    <!-- NAVBAR SCROLL -->
+    <script>
+        $(window).scroll(function() {
+            $('.fixed-top').toggleClass('scrolled', $(this).scrollTop() > 700);
+        });
+    </script>
+    <script>
+        $(window).on('load', function() {
+            $('#modalWarning').modal('show');
+        });
+
+        setTimeout(function() {
+            $('#modalWarning').modal('hide');
+        }, 30000);
+    </script>
 </body>
 
 </html>
