@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="AlphaCredit MX">
-    <title>asdfqwefqw</title>
+    <title>New Bonut</title>
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Tell the browser to be responsive to screen width -->
@@ -16,8 +16,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/417cde1f98.js"></script>
     <!-- CookieAlert -->
@@ -30,8 +29,12 @@
     <header id="header">
     </header>
 
-    <div class="container-fluid banner" id="banner"></div>
+    <div class="container-fluid rect-bg max" id="producto"> </div>
+    <div id="funciona"></div>
 
+    <footer id="contacto">
+
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -39,8 +42,24 @@
     <!-- <script type="text/javascript" src="js/supportJsonIterpreter.js"></script> -->
     <script type="text/javascript" src="js/supportJsonInterpreter.js"></script>
     <script type="text/javascript" src="js/navBar.js"></script>
-    <script type="text/javascript" src="js/banner.js"></script>
+    <script type="text/javascript" src="js/divProducto.js"></script>
+    <script type="text/javascript" src="js/productConfig.js"></script>
+    <script type="text/javascript" src="js/footerCustom.js"></script>
+    <!-- NAVBAR SCROLL -->
+    <script>
+        $(window).scroll(function() {
+            $('.fixed-top').toggleClass('scrolled', $(this).scrollTop() > 700);
+    </script>
+        });
+    <script>
+        $(window).on('load', function() {
+            $('#modalWarning').modal('show');
+        });
 
+        setTimeout(function() {
+            $('#modalWarning').modal('hide');
+        }, 30000);
+    </script>
 </body>
 
 </html>
