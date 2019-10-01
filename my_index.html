@@ -31,10 +31,13 @@
 
     <div class="container-fluid rect-bg max" id="producto"> </div>
     <div id="funciona"></div>
+    <div class="container-fluid banner" id="banner"></div>
 
-    <footer id="contacto">
+    <footer id="contacto"></footer>
+    <div class="col-sm-12 dark-bg" id="abajo">
+    </div>
+    <div class="alert text-center cookiealert" role="alert" id="aviso"></div>
 
-    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -45,12 +48,17 @@
     <script type="text/javascript" src="js/divProducto.js"></script>
     <script type="text/javascript" src="js/productConfig.js"></script>
     <script type="text/javascript" src="js/footerCustom.js"></script>
+    <script type="text/javascript" src="js/banner.js"></script>
+    <script type="text/javascript" src="js/abajo.js"></script>
+    <script type="text/javascript" src="js/aviso.js"></script>
+
     <!-- NAVBAR SCROLL -->
     <script>
         $(window).scroll(function() {
             $('.fixed-top').toggleClass('scrolled', $(this).scrollTop() > 700);
         });
     </script>
+        
     <script>
         $(window).on('load', function() {
             $('#modalWarning').modal('show');

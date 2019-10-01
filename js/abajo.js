@@ -13,7 +13,7 @@ p_max.childComponent["b"]= b_copy
 p_max.childComponent["p"]= p_otro
 p_max.childComponent["span"]= span_bontu
 
-p_otro.text["fondo"]="| Fondo flexible e inteligente. Todos los derechos reservados."
+p_otro.text["fondo"]=" | Fondo flexible e inteligente. Todos los derechos reservados."
 
 
 b_copy.text["copy"] = "© 2019 Bontu"
