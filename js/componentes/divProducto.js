@@ -1,22 +1,20 @@
-div2 = basicStructure('div')
-div3 = basicStructure('div')
-div4 = basicStructure('div')
-div5 = basicStructure('div')
-div6 = basicStructure('div')
-div7 = basicStructure('div')
-div8 = basicStructure('div')
-
-img1 = basicStructure('img')
-img2 = basicStructure('img')
-img3 = basicStructure('img')
-
-h3_prod1 = basicStructure('h3')
-h3_prod2 = basicStructure('h3')
-h3_prod3 = basicStructure('h3')
-
-p1 = basicStructure('p')
-p2 = basicStructure('p')
-p3 = basicStructure('p')
+import {basicStructure, addJson2Html} from '../tools/supportJsonInterpreter.js'
+let div2 = basicStructure('div')
+let div3 = basicStructure('div')
+let div4 = basicStructure('div')
+let div5 = basicStructure('div')
+let div6 = basicStructure('div')
+let div7 = basicStructure('div')
+let div8 = basicStructure('div')
+let img1 = basicStructure('img')
+let img2 = basicStructure('img')
+let img3 = basicStructure('img')
+let h3_prod1 = basicStructure('h3')
+let h3_prod2 = basicStructure('h3')
+let h3_prod3 = basicStructure('h3')
+let p1 = basicStructure('p')
+let p2 = basicStructure('p')
+let p3 = basicStructure('p')
 
 div2.attr.class = 'row'
 div2.childComponent['div3'] = div3
@@ -65,6 +63,5 @@ img3.attr.alt="Clock"
 h3_prod3.text['texto'] = "Inmediato"
 
 p3.text['texto'] = "Te entregamos tu dinero vía transferencia en cuestión de minutos"
-
-addJson2Html({ div2 }, 'producto')
+export {div2}
 

@@ -49,11 +49,11 @@ header {
 
 .fixed-top {
     background: linear-gradient(to top, transparent, #012b35) !important;
-    transition: 750ms ease;
+    transition: 500ms ease;
 }
 
 .fixed-top.scrolled {
-    background: #000000 !important;
+    background: #012b35 !important;
 }
 
 header .nav-link {

@@ -1,46 +1,48 @@
-div = basicStructure("div")
+import {basicStructure} from '../tools/supportJsonInterpreter.js'
 
-divContainerFluidMax = basicStructure("div")
+let div = basicStructure("div")
 
-divRowSpace = basicStructure("div")
-divRowSpace2 = basicStructure("div")
+let divContainerFluidMax = basicStructure("div")
 
-divColSm12 = basicStructure("div")
-divColSm12Row = basicStructure("div")
-divColSm12RowBetaCredit = basicStructure("div")
-divColSm_2 = basicStructure("div")
+let divRowSpace = basicStructure("div")
+let divRowSpace2 = basicStructure("div")
 
-divColSm_6_row = basicStructure("div")
+let divColSm12 = basicStructure("div")
+let divColSm12Row = basicStructure("div")
+let divColSm12RowBetaCredit = basicStructure("div")
+let divColSm_2 = basicStructure("div")
 
-divColSm_row_legalF = basicStructure("div")
+let divColSm_6_row = basicStructure("div")
+
+let divColSm_row_legalF = basicStructure("div")
 divColSm_row_legalF.attr.class = "col-sm-6 row legalF"
 
-divColSm_6 = basicStructure("div")
-divColSm_6_2 = basicStructure("div")
-divColSm_6_3 = basicStructure("div")
+let divColSm_6 = basicStructure("div")
+let divColSm_6_2 = basicStructure("div")
+let divColSm_6_3 = basicStructure("div")
 
-divColSm = basicStructure("div")
-divColSm2 = basicStructure("div")
-divColSm3 = basicStructure("div")
-divColSm4 = basicStructure("div")
+let divColSm = basicStructure("div")
+let divColSm2 = basicStructure("div")
+let divColSm3 = basicStructure("div")
+let divColSm4 = basicStructure("div")
 
-p = basicStructure("p")
-h5Legales = basicStructure("h5")
-formContact = basicStructure("form")
+let p = basicStructure("p")
+let h5Legales = basicStructure("h5")
+let formContact = basicStructure("form")
 
-divRowForm = basicStructure("div")
+let divRowForm = basicStructure("div")
 
-divColSm21 = basicStructure("div")
+let divColSm21 = basicStructure("div")
 divColSm21.attr.class = "col-sm-2"
-imgColSm21 = basicStructure("img")
+let imgColSm21 = basicStructure("img")
 imgColSm21.attr.src = "images/UNE.png"
 imgColSm21.attr.alt = "UNE"
 divColSm21.childComponent["imgColSm21"] = imgColSm21
 
-divColSm22 = basicStructure("div")
+let divColSm22 = basicStructure("div")
 divColSm22.attr.class = "col-sm-2"
-imgColSm22 = basicStructure("img")
-aimgColSm22 = basicStructure("a")
+let imgColSm22 = basicStructure("img")
+let aimgColSm22 = basicStructure("a")
 aimgColSm22.attr.href = "https://www.gob.mx/condusef"
 aimgColSm22.attr.target = "_blank"
 
@@ -51,10 +53,10 @@ divColSm22.childComponent["aimgColSm22"] = aimgColSm22
 aimgColSm22.childComponent["imgColSm22"] = imgColSm22
 
 /////////////////////////////////////
-divColSm23 = basicStructure("div")
+let divColSm23 = basicStructure("div")
 divColSm23.attr.class = "col-sm-2"
-imgColSm23 = basicStructure("img")
-aimgColSm23 = basicStructure("a")
+let imgColSm23 = basicStructure("img")
+let aimgColSm23 = basicStructure("a")
 aimgColSm23.attr.href = "https://www.buro.gob.mx/"
 aimgColSm23.attr.target = "_blank"
 
@@ -71,7 +73,7 @@ divRowSpace2.attr.class = "row space"
 divColSm12.attr.class = "col-sm-12"
 
 divColSm12RowBetaCredit.attr.class = "col-sm-12"
-pBetaCredit = basicStructure("p")
+let pBetaCredit = basicStructure("p")
 pBetaCredit.text.pBetaCredit = "Betacredit, S.A. de C.V., SOFOM, E.N.R., en su constitución y operación no requiere de autorización de la Secretaría de Hacienda y Crédito Público y está sujeta a la supervisión de la Comisión Nacional Bancaria y de Valores únicamente en materia de prevención y detección de Operaciones con Recursos de Procedencia Ilícita y Financiamiento al Terrorismo."
 divColSm12RowBetaCredit.childComponent["pBetaCredit"] = pBetaCredit
 
@@ -94,25 +96,25 @@ divColSm4.attr.class = "col-sm"
 p.text.p = "Si tienes alguna duda por favor déjanos tus datos y nos pondremos en contacto:"
 h5Legales.text.h5Legales = "Legales"
 
-inputName = basicStructure("input")
+let inputName = basicStructure("input")
 inputName.attr.type = "text"
 inputName.attr.class = "form-control"
 inputName.attr.placeholder = "Nombre..."
 inputName.attr.name = "nombre"
 
-inputMail = basicStructure("input")
+let inputMail = basicStructure("input")
 inputMail.attr.type = "text"
 inputMail.attr.class = "form-control"
 inputMail.attr.placeholder = "Correo electrónico..."
 inputMail.attr.name = "mail"
 
-inputPhone = basicStructure("input")
+let inputPhone = basicStructure("input")
 inputPhone.attr.type = "text"
 inputPhone.attr.class = "form-control"
 inputPhone.attr.placeholder = "Teléfono..."
 inputPhone.attr.name = "telefono"
 
-buttonSend = basicStructure("input")
+let buttonSend = basicStructure("input")
 buttonSend.attr.type = "submit"
 buttonSend.attr.class = "form-control"
 buttonSend.attr.value = "Enviar"
@@ -125,24 +127,24 @@ formContact.attr["data-toggle"] = "validator"
 formContact.attr.action = "https://katana.alphacredit.mx/vg/gestion/apps/AXS/bontu.cgi"
 formContact.attr.enctype = "multipart/form-data"
 
-ulLegalesFirstColumn = basicStructure("ul")
-liLegales1 = basicStructure("li")
-aLegales1 = basicStructure("a")
+let ulLegalesFirstColumn = basicStructure("ul")
+let liLegales1 = basicStructure("li")
+let aLegales1 = basicStructure("a")
 aLegales1.attr.href = "legal/index.html#constitucion"
 aLegales1.text.liLegales1 = "Aviso sobre constitución"
 
-liLegales2 = basicStructure("li")
-aLegales2 = basicStructure("a")
+let liLegales2 = basicStructure("li")
+let aLegales2 = basicStructure("a")
 aLegales2.attr.href = "legal/index.html#terminos"
 aLegales2.text.aLegales2 = "Términos y Condiciones de Uso"
 
-liLegales3 = basicStructure("li")
-aLegales3 = basicStructure("a")
+let liLegales3 = basicStructure("li")
+let aLegales3 = basicStructure("a")
 aLegales3.attr.href = "legal/index.html#aviso"
 aLegales3.text.aLegales3 = "Aviso de privacidad"
 
-liLegales4 = basicStructure("li")
-aLegales4 = basicStructure("a")
+let liLegales4 = basicStructure("li")
+let aLegales4 = basicStructure("a")
 aLegales4.attr.href = "legal/index.html#leyendas"
 aLegales4.text.aLegales3 = "Leyendas de Riesgo"
 
@@ -160,24 +162,24 @@ liLegales4.childComponent["aLegales4"] = aLegales4
 
 //LEGALES2
 
-ulLegalesSecond = basicStructure("ul")
-liLegalesSecond1 = basicStructure("li")
-aLegalesSecond1 = basicStructure("a")
+let ulLegalesSecond = basicStructure("ul")
+let liLegalesSecond1 = basicStructure("li")
+let aLegalesSecond1 = basicStructure("a")
 aLegalesSecond1.attr.href = "legal/index.html#educacion"
 aLegalesSecond1.text.liLegales1 = "Educación Financiera"
 
-liLegalesSecond2 = basicStructure("li")
-aLegalesSecond2 = basicStructure("a")
+let liLegalesSecond2 = basicStructure("li")
+let aLegalesSecond2 = basicStructure("a")
 aLegalesSecond2.attr.href = "legal/index.html#une"
 aLegalesSecond2.text.aLegales2 = "UNE"
 
-liLegalesSecond3 = basicStructure("li")
-aLegalesSecond3 = basicStructure("a")
+let liLegalesSecond3 = basicStructure("li")
+let aLegalesSecond3 = basicStructure("a")
 aLegalesSecond3.attr.href = "legal/index.html#buro"
 aLegalesSecond3.text.aLegales3 = "Buró de Entidades Financieras"
 
-liLegalesSecond4 = basicStructure("li")
-aLegalesSecond4 = basicStructure("a")
+let liLegalesSecond4 = basicStructure("li")
+let aLegalesSecond4 = basicStructure("a")
 aLegalesSecond4.attr.href = "legal/index.html#condusef"
 aLegalesSecond4.text.aLegales3 = "CONDUSEF"
 
@@ -237,4 +239,4 @@ divColSm12Row.childComponent["divColSm23"] = divColSm23;
 divColSm_row_legalF.childComponent["divColSm12RowBetaCredit"] = divColSm12RowBetaCredit
 
 
-addJson2Html({ div }, "contacto")
+export { div }

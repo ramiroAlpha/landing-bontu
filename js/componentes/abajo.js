@@ -1,9 +1,11 @@
-p_max = basicStructure("p")
-b_copy = basicStructure("b")
-span_bontu = basicStructure("span")
-a_diralpha = basicStructure("a")
-p_otro =basicStructure("a")
-a_linkAlpha = basicStructure("a")
+import {basicStructure, addJson2Html} from '../tools/supportJsonInterpreter.js'
+
+let p_max = basicStructure("p")
+let b_copy = basicStructure("b")
+let span_bontu = basicStructure("span")
+let a_diralpha = basicStructure("a")
+let p_otro =basicStructure("a")
+let a_linkAlpha = basicStructure("a")
 
 
 
@@ -26,4 +28,4 @@ a_linkAlpha.attr.target="_blank"
 a_linkAlpha.text["link"]=" AlphaCredit®"
 
 
-addJson2Html({ p_max }, "abajo")
+export {p_max}

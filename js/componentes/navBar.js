@@ -1,117 +1,84 @@
-div = basicStructure('div')
-div1 = basicStructure('div')
-div2 = basicStructure('div')
-div3 = basicStructure('div')
-div4 = basicStructure('div')
-
-navbar = basicStructure('nav')
-
-h2_header = basicStructure('h2')
-span_h2_header = basicStructure('span')
-
-a_bontu = basicStructure('a')
-a_producto = basicStructure('a')
-a_cfuncoina = basicStructure('a')
-a_contacto = basicStructure('a')
-a_login = basicStructure('a')
-
-button_menu = basicStructure('button')
-span_button_menu = basicStructure('span')
-
-ul_menu = basicStructure('ul')
-ul_login = basicStructure('ul')
-
-li_menu_producto = basicStructure('Li')
-li_menu_cfunciona = basicStructure('li')
-li_menu_contacto = basicStructure('li')
-li_login = basicStructure('li')
+import {const_strings, const_ref} from './projectStrings.js';
+import {basicStructure, addChild} from '../tools/supportJsonInterpreter.js'
 
 
-div.attr.class = 'container-fluid'
-div.childComponent['div1'] = div1
-div.childComponent['div4'] = div4
+let div = basicStructure('div', { class: 'container-fluid' })
+let div1 = basicStructure('div', { class: 'row' })
+let div2 = basicStructure('div', { class: 'mcol-sm-12 fixed-top' })
+let div3 = basicStructure('div', { class: 'collapse navbar-collapse', id: 'navbarNav' })
+let div4 = basicStructure('div', { class: 'col-sm-7' })
 
-div1.attr.class = 'row'
-div1.childComponent['div2'] = div2
+let navbar = basicStructure('nav', { class: 'navbar navbar-expand-lg navbar-dark' })
 
-div2.attr.class = 'mcol-sm-12 fixed-top'
-div2.childComponent['navbar'] = navbar
+let h2_header = basicStructure('h2', {}, { 'texto': const_strings.header })
+let span_h2_header = basicStructure('span', {}, { 'texto': const_strings.span_header })
 
-div3.attr.class = 'collapse navbar-collapse'
-div3.attr.id = 'navbarNav'
-div3.childComponent['ul_menu'] = ul_menu
-div3.childComponent['ul_login'] = ul_login
+let a_bontu = basicStructure('a', { class: 'navbar-brand', href: const_ref.home }, { 'texto': const_strings.bontu })
+let a_producto = basicStructure('a', { class: 'nav-link', href: const_ref.producto }, { "texto":  const_strings.product})
+let a_cfuncoina = basicStructure('a', { class: 'nav-link', href: const_ref.funciona }, { "texto": const_strings.funciona })
+let a_contacto = basicStructure('a', { class: 'nav-link', href: const_ref.contacto }, { "texto": const_strings.contacto })
+let a_login = basicStructure('a', { class: 'nav-link login', href: const_ref.login }, { "texto": const_strings.login })
 
-div4.attr.class = 'col-sm-7'
-div4.childComponent['h2_header'] = h2_header
+let button_menu = basicStructure('button', {
+    class: 'navbar-toggler',
+    type: 'button',
+    ['data-toggle']: 'collapse',
+    ['data-target']: const_ref.navbarNav,
+    ['aria-controls']: 'navbarNav',
+    ['aria-expanded']: 'false',
+    ['aria-label']: 'Toggle navigation'
+})
+let span_button_menu = basicStructure('span', { class: 'navbar-toggler-icon' })
 
-h2_header.text['texto'] = 'Tus ventas a través de plataformas digitales son la llave para obtener el crédito que esperabas'
-h2_header.childComponent['br'] = basicStructure('br')
-h2_header.childComponent['span_h2_header'] = span_h2_header
+let ul_menu = basicStructure('ul', { class: 'navbar-nav nav1' })
+let ul_login = basicStructure('ul', { class: 'navbar-nav ml-auto' })
 
-span_h2_header.text['texto'] = 'Sin garantías ni avales'
-
-navbar.attr.class = 'navbar navbar-expand-lg navbar-dark'
-navbar.childComponent['a_bontu'] = a_bontu
-navbar.childComponent['button_menu'] = button_menu
-navbar.childComponent['div3'] = div3
-
-a_bontu.attr.class = 'navbar-brand'
-a_bontu.attr.href = '#'
-a_bontu.text = {}
-a_bontu.text['Bontu'] = 'Bonut'
-
-button_menu.attr.class = 'navbar-toggler'
-button_menu.attr.type = 'button'
-button_menu.attr['data-toggle'] = 'collapse'
-button_menu.attr['data-target'] = '#navbarNav'
-button_menu.attr['aria-controls'] = 'navbarNav'
-button_menu.attr['aria-expanded'] = 'false'
-button_menu.attr['aria-label'] = 'Toggle navigation'
-button_menu.childComponent['span_button_menu'] = span_button_menu
-
-span_button_menu.attr.class = 'navbar-toggler-icon'
-
-ul_menu.attr.class = 'navbar-nav nav1'
-ul_menu.childComponent['li_menu_producto'] = li_menu_producto
-ul_menu.childComponent['li_menu_cfunciona'] = li_menu_cfunciona
-ul_menu.childComponent['li_menu_contacto'] = li_menu_contacto
-
-li_menu_producto.attr.class = 'nav-item'
-li_menu_producto.childComponent['a_producto'] = a_producto
-
-a_producto.attr.class = 'nav-link'
-a_producto.attr.href = '#producto'
-a_producto.text = {}
-a_producto.text['a_producto'] = 'Producto'
-
-li_menu_cfunciona.attr.class = 'nav-item'
-li_menu_cfunciona.childComponent['a_cfuncoina'] = a_cfuncoina
-
-a_cfuncoina.attr.class = 'nav-link'
-a_cfuncoina.attr.href = '#funciona'
-a_cfuncoina.text = {}
-a_cfuncoina.text['a_cfuncoina'] = '¿Cómo funciona?'
-
-li_menu_contacto.attr.class = 'nav-item'
-li_menu_contacto.childComponent['a_producto'] = a_contacto
-
-a_contacto.attr.class = 'nav-link'
-a_contacto.attr.href = '#contacto'
-a_contacto.text = {}
-a_contacto.text['a_contacto'] = 'Contáctanos'
+let li_menu_producto = basicStructure('li', { class: 'nav-item' })
+let li_menu_cfunciona = basicStructure('li', { class: 'nav-item' })
+let li_menu_contacto = basicStructure('li', { class: 'nav-item' })
+let li_login = basicStructure('li', { class: 'nav-item' })
 
 
-ul_login.attr.class = 'navbar-nav ml-auto'
-ul_login.childComponent['li_login'] = li_login
-
-li_login.attr.class = 'nav-item'
-li_login.childComponent['a_login'] = a_login
-
-a_login.attr.class = 'nav-link login'
-a_login.attr.href = '#LOGIN'
-a_login.text = {}
-a_login.text['login'] = 'Iniciar Sesión'
-
-addJson2Html({ div }, 'header')
-
+{addChild(div,
+    [
+        addChild(div1,
+            [
+                addChild(div2,
+                    [
+                        addChild(navbar,
+                            [
+                                a_bontu,
+                                addChild(button_menu,
+                                    [
+                                        span_button_menu
+                                    ]),
+                                addChild(div3,
+                                    [
+                                        addChild(ul_menu,
+                                            [
+                                                addChild(li_menu_producto,
+                                                    [
+                                                        a_producto
+                                                    ]),
+                                                addChild(li_menu_cfunciona,
+                                                    [
+                                                        a_cfuncoina
+                                                    ]),
+                                                addChild(li_menu_contacto,
+                                                    [
+                                                        a_contacto
+                                                    ])]),
+                                        addChild(ul_login,
+                                            [
+                                                addChild(li_login,
+                                                    [
+                                                        a_login
+                                                    ])])])])])]),
+        addChild(div4,
+            [
+                addChild(h2_header,
+                    [
+                        basicStructure('br'),
+                        span_h2_header
+                    ])])])}
+export {div}

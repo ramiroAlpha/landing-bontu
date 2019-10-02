@@ -1,8 +1,10 @@
-b_aviso = basicStructure("b")
-small_info = basicStructure("small")
-small2_info = basicStructure("small")
-button_entendido = basicStructure("button")
-a_entendido = basicStructure("a")
+import {basicStructure} from '../tools/supportJsonInterpreter.js'
+
+let b_aviso = basicStructure("b")
+let small_info = basicStructure("small")
+let small2_info = basicStructure("small")
+let button_entendido = basicStructure("button")
+let a_entendido = basicStructure("a")
 
 
 
@@ -27,4 +29,4 @@ button_entendido.childComponent["a"]=a_entendido
 a_entendido.text["entendido"]="Entendido"
 
 
-addJson2Html({ b_aviso }, "aviso")
+export { b_aviso }

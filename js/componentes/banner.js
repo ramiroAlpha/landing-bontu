@@ -1,9 +1,11 @@
-div = basicStructure("div")
-div1 = basicStructure("div")
-div2 = basicStructure("div")
-div3 = basicStructure("div")
+import {basicStructure, addJson2Html} from '../tools/supportJsonInterpreter.js'
 
-h3_conypag = basicStructure("h3")
+let div = basicStructure("div")
+let div1 = basicStructure("div")
+let div2 = basicStructure("div")
+let div3 = basicStructure("div")
+
+let h3_conypag = basicStructure("h3")
 
 
 div.attr.class = "row"
@@ -22,4 +24,4 @@ h3_conypag.text["texto"] = "Contratar y pagar un crédito nunca había sido tan 
 div3.attr.class = "col-sm-2"
 
 
-addJson2Html({ div }, "banner")
+export {div}

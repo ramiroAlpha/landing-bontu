@@ -1,6 +1,6 @@
 function hardMakeCode(components) {
-    for (component in components) {
-        ncomponent = document.createElement(components[component].typeName)
+    for (let component in components) {
+        let ncomponent = document.createElement(components[component].typeName)
         components[component].elemento = ncomponent
         if (components[component].attr) {
             addAttr(ncomponent, components[component].attr)
@@ -17,18 +17,18 @@ function hardMakeCode(components) {
 }
 
 function addAttr(element, attrs) {
-    for (attr in attrs) {
+    for (let attr in attrs) {
         $(element).attr(attr, attrs[attr])
     }
 }
 function addValues(element, attrs) {
-    for (attr in attrs) {
+    for (let attr in attrs) {
         $(element).text(attrs[attr])
     }
 }
 
 function constructor(cElements, ee = null) {
-    for (e in cElements) {
+    for (let e in cElements) {
         if (ee) {
             ee.appendChild(cElements[e].elemento)
         }
@@ -43,7 +43,7 @@ function constructor(cElements, ee = null) {
 function addJson2Html(jsonStructure, container) {
     hardMakeCode(jsonStructure)
     constructor(jsonStructure)
-    for (e in jsonStructure) {
+    for (let e in jsonStructure) {
         document.getElementById(container).appendChild(jsonStructure[e]['elemento'])
     }
 }
@@ -58,8 +58,16 @@ function basicStructure(typeComponent, attr=null, text=null, childComponent=null
 
 }
 
-function addChild(fatherComponent, childComponent, name) {
-    fatherComponent.childComponent[name] = childComponent
+function addChild(fatherComponent, childsComponent) {
+    let identificador = 0
+    childsComponent.forEach(element => {
+        fatherComponent.childComponent[""+identificador] = element
+        identificador = identificador + 1
+    });
+    // fatherComponent.childComponent[name] = childComponent
     return fatherComponent
 
 }
+
+
+export {addJson2Html, basicStructure, addChild}
